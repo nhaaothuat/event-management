@@ -133,7 +133,7 @@
   }
 
   ul {
-    @apply list-disc list-inside;
+    @apply list-none;
   }
   html {
     @apply font-mono;
