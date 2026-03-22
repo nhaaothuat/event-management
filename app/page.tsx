@@ -1,15 +1,8 @@
 import EventCard from "@/components/component/EventCard";
 import ExploreBtn from "@/components/component/ExploreBtn";
+import event from "@/data/MOCK_DATA.json";
 
 
-const event = [
-  {
-    image:"/assets/images.jpg", title:"Event 1",slug:'event-1',location:'location-1',date:'Date-1',time:'Time-1'
-  },
-  {
-    image:"/assets/images2.jpg", title:"Event 2",slug:'event-2',location:'location-2',date:'Date-2',time:'Time-2'
-  }
-]
 
 export default function Home() {
   return (
@@ -21,8 +14,8 @@ export default function Home() {
         <h3> Features Events</h3>
         <ul className="events">
           {
-            event.map((event) => (
-              <li key={event.title}> 
+            event.slice(0,12).map((event) => (
+              <li key={event.id}> 
               <EventCard {...event}/>
               </li>
             ))
